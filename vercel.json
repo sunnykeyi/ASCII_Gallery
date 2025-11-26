@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "app.py",
+        "src": "api/__init__.py", 
         "use": "@vercel/python"
       }
     ],
     "routes": [
       {
-        "src": "/get_art(.*)", // 匹配以 /get_art 开头的所有路径 (包括查询参数)
-        "dest": "app.py" 
+        "src": "/get_art(.*)",
+        "dest": "api/__init__.py" 
       }
     ]
   }
